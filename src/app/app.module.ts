@@ -7,9 +7,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
+
+import { APIService } from './services/api.service';
+import { PostComponent } from './post/post.component';
+import { CommentComponent } from './post/comment/comment.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostComponent,
+    CommentComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -19,7 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [APIService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

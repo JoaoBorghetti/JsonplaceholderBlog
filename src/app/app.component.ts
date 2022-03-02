@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { APIService } from './services/api.service';
+import { PostModel } from './models/post.model';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Blog';
-  constructor(){}
+  posts? : Observable<PostModel[]>
+  constructor(public db : APIService){
+    this.posts = db.getPosts()
+  }
 }

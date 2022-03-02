@@ -1,0 +1,3 @@
+<div> <h1>{{Post?.title}}</h1>
+    <app-comment *ngFor="let comment of Comments| async as list" [comment]="comment"></app-comment>
+</div>
