@@ -11,11 +11,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { APIService } from './services/api.service';
 import { PostComponent } from './post/post.component';
 import { CommentComponent } from './post/comment/comment.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PostListComponent } from './post/post-list/post-list.component';
+import { PostPreviewComponent } from './post/post-preview/post-preview.component';
+import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './photo/gallery/gallery.component';
+import { PhotoComponent } from './photo/photo.component';
+import { ProfileComponent } from './profile/profile.component';
+import { TruncatePipe } from './utils/transform.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    CommentComponent
+    CommentComponent,
+    NavbarComponent,
+    PostListComponent,
+    PostPreviewComponent,
+    HomeComponent,
+    PhotoComponent,
+    GalleryComponent,
+    ProfileComponent,
+    TruncatePipe
   ],
   imports: [
     FlexLayoutModule,

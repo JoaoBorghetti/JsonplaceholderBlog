@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { CommentModel } from '../models/comment.model';
 import { PostModel } from '../models/post.model';
 import { APIService } from '../services/api.service';
-
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',

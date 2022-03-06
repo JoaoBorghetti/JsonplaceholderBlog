@@ -1,0 +1,8 @@
+<div>
+    <div>
+        <button mat-button><mat-icon>add</mat-icon></button>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="stretch" >
+        <app-post-preview fxFlexAlign="stretch" *ngFor="let post of Posts | async" [post]="post"></app-post-preview>
+    </div>
+</div>

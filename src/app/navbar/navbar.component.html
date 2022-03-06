@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span> Forum</span>
+      <button mat-flat-button color="primary" routerLink="/home" routerLinkActive="active">Posts</button>
+      <button mat-flat-button color="primary" routerLink="/photos">Gallery</button>
+      <button class="user" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span routerLink="/profile">Profile</span>
+        </button>
+        <button mat-menu-item>
+            <span>Logout</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
