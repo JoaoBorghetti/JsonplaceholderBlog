@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { PostModel } from '../models/post.model';
 import { CommentModel } from '../models/comment.model';
 import { UserModel } from '../models/user.model';
@@ -10,14 +10,22 @@ import { PhotoModel } from '../models/photo.model';
 })
 export class APIService {
   url : string = 'https://jsonplaceholder.typicode.com'
-  constructor(public http:HttpClient) { }
-
+  constructor(public http:HttpClient) {}
 
   getPosts(){
     return this.http.get<PostModel[]>(this.url+'/posts')
   }
   getPost(id:number){
     return this.http.get<PostModel>(this.url+'/posts/'+id)
+  }
+  newPost(post:PostModel){
+    return this.http.post('/posts',post)
+  }
+  delPost(id:number){
+    return this.http.delete('/posts/'+id)
+  }
+  setPost(id:number,post:PostModel){
+    return this.http.put('/posts/'+id,post)
   }
   getPostComments(postId:number){
     return this.http.get<CommentModel[]>(this.url+'/posts/'+postId+'/comments')
@@ -35,7 +43,6 @@ export class APIService {
   getUserTodos(id:number){
     return this.http.get<AlbumModel[]>(this.url+'/users/'+id+'/todos')
   }
-
   getAlbums(){
     return this.http.get<AlbumModel[]>(this.url+'/albums')
   }

@@ -1,4 +1,5 @@
 .line-clamp {
+    /*Truncate text content to 1 line adding '...' at the end*/
     display: -webkit-box;
     -webkit-line-clamp: 1;
     overflow: hidden;

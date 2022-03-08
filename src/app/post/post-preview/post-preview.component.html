@@ -1,5 +1,5 @@
 <div class="card card-shadow">
-    <p style="color: rgb(73, 73, 73);" class="line-clamp"><small>{{(this.user$ | async)?.name}}</small></p>
-    <p class="line-clamp">{{post?.title}}</p>
-    <p class="line-clamp"><a href="#" >{{(this.comments$ | async)?.length}} Comments</a></p>
+    <p style="color: rgb(73, 73, 73); margin-left: 5px;" class="line-clamp"><small>{{(this.user$ | async)?.name}}</small></p>
+    <p class="line-clamp" style="margin-left: 5px;">{{post?.title}}</p>
+    <p class="line-clamp" style="margin-left: 5px;"><a href="#" >{{(this.comments$ | async)?.length}} Comments</a></p>
 </div>

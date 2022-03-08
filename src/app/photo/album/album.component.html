@@ -1,0 +1,4 @@
+<div fxFlexLayout="row wrap">
+    <p>{{(albumUser$ | async)?.name}}</p>
+    <div *ngFor="let photo of photos$ | async"></div>
+</div>

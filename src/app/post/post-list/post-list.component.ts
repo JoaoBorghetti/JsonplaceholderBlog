@@ -9,7 +9,8 @@ import { APIService } from 'src/app/services/api.service';
 })
 export class PostListComponent implements OnInit {
   Posts? : Observable<PostModel[]>
-  constructor(public db: APIService) { }
+  constructor(public db: APIService) { 
+  }
 
   ngOnInit(): void {
     this.Posts = this.db.getPosts()

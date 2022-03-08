@@ -15,10 +15,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostListComponent } from './post/post-list/post-list.component';
 import { PostPreviewComponent } from './post/post-preview/post-preview.component';
 import { HomeComponent } from './home/home.component';
-import { GalleryComponent } from './photo/gallery/gallery.component';
 import { PhotoComponent } from './photo/photo.component';
 import { ProfileComponent } from './profile/profile.component';
-import { TruncatePipe } from './utils/transform.pipe';
+import { AlbumComponent } from './photo/album/album.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +28,8 @@ import { TruncatePipe } from './utils/transform.pipe';
     PostPreviewComponent,
     HomeComponent,
     PhotoComponent,
-    GalleryComponent,
     ProfileComponent,
-    TruncatePipe
+    AlbumComponent
   ],
   imports: [
     FlexLayoutModule,

@@ -3,6 +3,7 @@ import { CommentModel } from 'src/app/models/comment.model';
 import { PostModel } from 'src/app/models/post.model';
 import { UserModel } from 'src/app/models/user.model';
 import { APIService } from 'src/app/services/api.service';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-post-preview',
